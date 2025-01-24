@@ -1,0 +1,38 @@
+/* zerando parametros do csss */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* personalizando navbar */
+
+header{
+    background-color: #eb8305;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+
+}
+
+.navbar{
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0, 14px;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: bold;
+    
+}
+
