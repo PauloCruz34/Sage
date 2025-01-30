@@ -1,114 +1,110 @@
-/* zerando parametros do csss */
-*{
+/* Zerando parâmetros do CSS */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-/* personalizando navbar */
-
-header{
-    background-color: #eb8305;
+/* Personalizando navbar */
+header {
+    background-color: #A1A6A2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     color: #000;
     text-decoration: none;
-
+    font-weight: 500;
 }
 
-.navbar{
-    min-height: 70px;
+.navbar {
+    min-height: 70px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0, 34px;
+    padding: 0 34px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.logo{
-    font-size: 2rem;
-    font-weight: bold;
-    
+.logo img {
+    height: 60px; /* Ajuste menor para não aumentar a navbar */
+    width: auto;
+    max-height: 60px; 
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
     align-items: center;
     gap: 60px;
-
 }
 
-.nav-link{
-
-    transition: 0.5s ease;
-
+.nav-link {
+    transition: 0.3s ease;
+    color: #fff;
+    font-size: 1rem;
 }
 
-.nav-link:hover{
-    color: aliceblue;
+.nav-link:hover {
+    color: #ffd700;
 }
 
-.hamburguer{
+.hamburguer {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.bar{
+.bar {
     display: block;
     width: 28px;
     height: 3px;
     border-radius: 2px;
-    margin: 5px auto;
     background-color: #fff;
     transition: all 0.3s ease-in-out;
-
 }
 
-@media(max-width:768px){
-    .hamburguer{
-        display: block;
-
+@media (max-width: 768px) {
+    .hamburguer {
+        display: flex;
     }
 
-    .hamburguer.active .bar:nth-child(2){
-        opacity: 0;
-    }
-
-    .hamburguer.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-
-    }
-
-    .hamburguer.active.bar:nth-child(1){
-        transform: translateY(-8px) rotate(-45deg);
-        
-    }
-
-    .nav-menu{
+    .nav-menu {
         position: fixed;
-        left: -100px;
+        left: -100%;
         top: 70px;
         gap: 0;
-        border-radius: 0, 0, 20, 20;
         background-color: #eb8305;
         text-align: center;
         flex-direction: column;
         width: 100%;
         transition: 0.3s;
+        padding: 20px 0;
     }
 
-    .nav-item{
-        margin: 16px , 0;
-
+    .nav-item {
+        margin: 16px 0;
     }
 
-    .nav-menu.active{
+    .nav-menu.active {
         left: 0;
     }
 
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
